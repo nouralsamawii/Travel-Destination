@@ -5,10 +5,8 @@ import Footer from "../footer/Footer";
 function Home() {
     return (
         <>
-            <Header />
-            <Tours />
-            <Footer />
-        </>
+        <Tours />
+      </>
     );
 }
 
