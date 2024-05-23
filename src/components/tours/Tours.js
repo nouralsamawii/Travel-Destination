@@ -1,24 +1,15 @@
-import data from '../../data/db.json'
-import './Tours.css'
-
+import data from './../../data/db.json';
+import './Tours.css';
+import Tour from './tour/Tour';
 function Tours() {
-    return (
-        <>
-        <main>
-            {
-                data.map(ele=>{
-                    return(
-                    <div key={ele.id} className="tour-container">
-                    <h3 className="tour-name">{ele.name}</h3>
-                    <img src={ele.image} alt={ele.name} className="tour-image" />
-                    <div className="tour-separator"></div>
-                  </div>
-                   )
-                })
-            }
-        </main>
-        </>
-    );
+    
+  return (
+    <>
+      {data.map(city => (
+        <Tour id={city.id} name={city.name} image={city.image} />
+      ))}
+    </>
+  );
 }
 
 export default Tours;
